@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quadro Trello</title>
-    
+
     <style>
-        body {
-            background-color: black;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        iframe { 
-            width: 100%; 
-            height: 100vh; 
-            border: none; 
-            display: block;
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
         }
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.cookie = "SameSite=None; Secure"; // Habilita cookies para sites externos
+        });
+    </script>
 </head>
 <body>
 
-    <iframe src="https://trello.com/b/4AQAumyj.html"></iframe>
+    <iframe src="https://trello.com/b/4AQAumyj.html" allow="fullscreen; autoplay; clipboard-write; encrypted-media;"></iframe>
 
 </body>
 </html>

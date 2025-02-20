@@ -17,6 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100vw;
             height: 100vh;
             overflow: hidden;
         }
@@ -30,13 +31,15 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.cookie = "SameSite=None; Secure"; // Habilita cookies para sites externos
+            if (navigator.userAgent.includes("Android") || navigator.userAgent.includes("Mobile")) {
+                document.querySelector("iframe").src += "?force_webview=true";
+            }
         });
     </script>
 </head>
 <body>
 
-    <iframe src="https://trello.com/b/4AQAumyj.html" allow="fullscreen; autoplay; clipboard-write; encrypted-media;"></iframe>
+    <iframe src="https://trello.com/b/4AQAumyj.html" allowfullscreen></iframe>
 
 </body>
 </html>

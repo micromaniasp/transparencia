@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadro Trello</title>
+    <title>Quadro Trello Incorporado</title>
 
     <style>
         * {
@@ -31,16 +31,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (navigator.userAgent.includes("Android") || navigator.userAgent.includes("Mobile")) {
-                document.querySelector("iframe").src += "?force_webview=true";
+            const iframe = document.querySelector("iframe");
+            if (iframe) {
+                iframe.src = "https://trello.com/b/4AQAumyj.html?embedded=true";
             }
         });
     </script>
 </head>
 <body>
 
-    <iframe src="https://trello.com/b/4AQAumyj.html?embedded=true" allowfullscreen></iframe>
-
+    <iframe allowfullscreen></iframe>
 
 </body>
 </html>
